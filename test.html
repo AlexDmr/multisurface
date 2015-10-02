@@ -1,0 +1,23 @@
+<!doctype html>
+
+<html ng-app="testMM">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1" />
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="bundleTest.js" defer></script>
+	
+	<link rel="stylesheet" href="test.css"></link>
+</head>
+<body ng-controller="testMMController as test">
+	<h1>Platforms</h1>
+	<section class="platforms">
+		<section ng-repeat="P in test.platforms" class="platform">
+			<h1>{{P.platform.name}}</h1>
+			<p>{{P.platform.screen.height}} x {{P.platform.screen.width}}</p>
+		</section>
+	</section>
+	{{test.platforms | json}}
+</body>
+</html>
