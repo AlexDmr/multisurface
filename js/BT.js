@@ -1,7 +1,6 @@
-var serialPort	= require("serialport")
+/*var serialPort	= require("serialport")
   , SerialPort	= serialPort.SerialPort
   , reArduino	= /arduino/i
-  , noble		= require('noble')
   ;
 
 serialPort.list(function (err, ports) {
@@ -34,6 +33,10 @@ serialPort.list(function (err, ports) {
   });
 });
 
+module.exports = serialPort;*/
+
+var noble		= require('noble')
+
 // BLE noble
 noble.on( 'scanStart'
 		, function() {
@@ -52,5 +55,3 @@ noble.on( 'discover'
 		);
 noble.startScanning();
 
-
-module.exports = serialPort;
