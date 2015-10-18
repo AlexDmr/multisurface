@@ -76,13 +76,13 @@
 		L_CB.forEach( function(cb) {cb(platforms);} );
 	}
 	  
-	description.screen = { width		: window.screen.width
-						 , height		: window.screen.height
-						 , orientation	: orientation.orientation
-						 };
-	description.window = { width		: window.innerWidth
-						 , height		: window.innerHeight
-						 };
+	description.screen 			= { width		: window.screen.width
+								  , height		: window.screen.height
+								  , orientation	: orientation.orientation
+								  };
+	description.window			= { width		: window.innerWidth
+								  , height		: window.innerHeight
+								  };
 
 	orientation.subscribe( function(o) {
 								 description.screen.orientation = o;
