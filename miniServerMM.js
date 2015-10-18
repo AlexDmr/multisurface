@@ -5,6 +5,7 @@ var express		= require('express')
   , platforms	= require('./server/platforms.js')
   , fs			= require("fs-extra")
   , path		= require( 'path' )
+  , BT			= require('./js/BT.js' )
   ;
 
 var app, server
